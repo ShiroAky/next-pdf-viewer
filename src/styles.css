@@ -1,0 +1,10 @@
+/* Esto asegura que NINGÚN canvas se salga del contenedor padre */
+.pdf-page-canvas {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block; /* Elimina espacios en blanco de la base del canvas */
+}
+.pdf-viewer-wrapper canvas {
+  max-width: 100%;
+  height: auto;
+}

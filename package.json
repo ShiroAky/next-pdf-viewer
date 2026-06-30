@@ -1,0 +1,56 @@
+{
+  "name": "next-manga-pdf",
+  "version": "1.0.3",
+  "description": "A lightweight, high-performance PDF viewer for Next.js, optimized for manga and document reading.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean --external react --external next --external pdfjs-dist --minify",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch --external react --external next --external pdfjs-dist",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "next": ">=16.2.9",
+    "react": ">=18.0.0"
+  },
+  "dependencies": {
+    "next": "16.2.9",
+    "pdfjs-dist": "^6.0.227"
+  },
+  "keywords": [
+    "nextjs",
+    "pdf",
+    "pdf-reader",
+    "react",
+    "server-components",
+    "optimized", 
+    "manga-reader",
+    "manga",
+    "manhua-reader",
+    "manhwa-reader",
+    "manhua",
+    "manhwa"
+  ],
+  "author": "ShiroAky",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  }
+}
